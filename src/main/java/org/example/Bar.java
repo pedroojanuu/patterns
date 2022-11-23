@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Bar {
-    protected boolean happyHour;
     protected List<BarObserver> observers;
     public Bar() {
-        happyHour = false;
-        observers = new ArrayList<>();
+        this.observers = new ArrayList<>();
+    }
+    public Bar(List<BarObserver> observers) {
+        this.observers = observers;
     }
     abstract public boolean isHappyHour();
     abstract public void startHappyHour();

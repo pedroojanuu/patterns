@@ -15,4 +15,7 @@ public class StringCaseChanger implements StringTransformer {
         }
         drink.setText(stringBuilder.toString());
     }
+    public void undo(StringDrink drink) {
+        execute(drink);
+    }
 }
